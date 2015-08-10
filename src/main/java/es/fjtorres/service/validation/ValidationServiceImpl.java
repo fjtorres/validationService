@@ -13,9 +13,20 @@ import javax.validation.ValidatorFactory;
 @Singleton
 public class ValidationServiceImpl implements IValidationService {
 
-    private final ValidatorFactory validatorFactory = Validation.buildDefaultValidatorFactory();
+    private ValidatorFactory validatorFactory;
 
+    public ValidationServiceImpl () {
+    	validatorFactory = Validation.buildDefaultValidatorFactory();
+    }
+    
+    public ValidationServiceImpl (final ValidatorFactory pValidatorFactory) {
+    	this.validatorFactory = pValidatorFactory;
+    }   
+    
     private Validator getValidator() {
+		if (validatorFactory == null) {
+			throw new IllegalStateException("validator factory is null");
+		}
         return validatorFactory.getValidator();
     }
 
