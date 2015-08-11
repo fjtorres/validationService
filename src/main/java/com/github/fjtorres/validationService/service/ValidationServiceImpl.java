@@ -1,4 +1,4 @@
-package es.fjtorres.service.validation;
+package com.github.fjtorres.validationService.service;
 
 import java.util.Set;
 

@@ -1,4 +1,4 @@
-package es.fjtorres.service.validation;
+package com.github.fjtorres.validationService.service;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertNotNull;
