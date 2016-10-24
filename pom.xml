@@ -66,6 +66,12 @@ The service are integrated with Javax Injection (JSR-330), the implementation cl
 			<groupId>javax.inject</groupId>
 			<artifactId>javax.inject</artifactId>
 		</dependency>
+		
+		<dependency>
+			<groupId>commons-beanutils</groupId>
+			<artifactId>commons-beanutils-core</artifactId>
+			<version>1.8.3</version>
+		</dependency>
 
 		<!-- TEST -->
 		<dependency>
@@ -81,6 +87,12 @@ The service are integrated with Javax Injection (JSR-330), the implementation cl
 			<scope>test</scope>
 		</dependency>
 
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jcl-over-slf4j</artifactId>
+			<version>${slf4j.version}</version>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
 
 	<url>https://github.com/fjtorres/validationService</url>
